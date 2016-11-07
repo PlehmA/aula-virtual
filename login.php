@@ -14,7 +14,7 @@ $row=$result2->fetch_assoc();
 if ($row['@valor_existe']==0)
 {
 	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
-    echo "<script>window.location.assign('frm_login.html')</script>";
+    echo "<script>window.location.assign('inicio.php')</script>";
 }
 	else
 			{
