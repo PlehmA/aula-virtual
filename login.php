@@ -11,7 +11,7 @@ $stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
 $result=$con->query("SELECT @valor_existe");
 $row=$result->fetch_assoc();
-if ($row['@valor_existe']==0)
+if ($row['@valor_existe']==1)
 {
 	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
     echo "<script>window.location.assign('inicio.php')</script>";
