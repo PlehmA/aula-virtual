@@ -51,7 +51,7 @@
                 <h2 class="form-signin-heading">Sector privado</h2>
                 </br>
                 <label for="inputEmail" class="sr-only">Nombre de usuario</label>
-                <input type="text" name="user" id="inputUser" class="form-control" placeholder="Usuario" required autofocus maxlength="80">
+                <input type="text" name="username" id="inputUser" class="form-control" placeholder="Usuario" required autofocus maxlength="80">
                 </br>
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
