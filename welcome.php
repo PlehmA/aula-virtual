@@ -17,7 +17,7 @@ if ($_SESSION['logeado'])
 	</head>
 	<body>
 		<hr>
-		<a href='inicio.php'>LOGOUT</a>
+		<a href='inicio.php'><button type="submit" name="button" class="btn btn-danger">Logout</button></a>
 		<br>
 		<hr>
 		<a href='list_productos.php'>Lista productos</a>
