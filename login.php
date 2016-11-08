@@ -26,6 +26,6 @@ if ($row['@valor_existe']==0)
 				$_SESSION['user']=$usuario;
 				$_SESSION['logeado']=true;
 				header("Location:welcome.php");
-				$con=close();
+				$con->close();
 			};
 ?>
