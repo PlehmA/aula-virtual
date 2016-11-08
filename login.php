@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/bdd.php';
+include_once ('includes/bdd.php');
 header('Content-Type: text/html;charset-UTF-8');
 $usuario=$_POST['user'];
 $pass=$_POST['password'];
