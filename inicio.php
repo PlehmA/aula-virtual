@@ -23,24 +23,25 @@
 
                 <div class="dropdown">
                     <div class="btn-group">
-                        <a href="index.html"><button type="button" class="btn btn-info">Home</button></a>
+                        <a href="index.php"><button type="button" class="btn btn-info">Home</button></a>
                         <a href="#"><button type="button" class="btn btn-info">F.A.Q.</button></a>
                     </div>
                     <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li role="presentation">
-                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;"></div>
-                        </li>
-
-                        <li role="presentation">
-                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="pass" style="padding: 4px;"></div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Recordar</label>
-                            </div>
-                        </li>
-                        <li><button type="submit" class="btn btn-block btn-success">Submit</button></li>
+                        <form class="" action="user_login.php" method="POST">
+                          <li role="presentation">
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;" required></div>
+                          </li>
+                          <li role="presentation">
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="pass" style="padding: 4px ;" required></div>
+                          </li>
+                          <li>
+                              <div class="checkbox">
+                                  <label><input type="checkbox" value="">Recordar</label>
+                              </div>
+                          </li>
+                          <li><button type="submit" class="btn btn-block btn-success">Submit</button></li>
+                        </form>
                     </ul>
                 </div>
             </nav>
