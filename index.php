@@ -30,19 +30,20 @@
                     </div>
                     <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <li role="presentation">
-                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;" required></div>
-                        </li>
-
-                        <li role="presentation">
-                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="pass" style="padding: 4px ;" required></div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Recordar</label>
-                            </div>
-                        </li>
-                        <li><button type="submit" class="btn btn-block btn-success">Submit</button></li>
+                        <form class="" action="user_login.php" method="POST">
+                          <li role="presentation">
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;" required></div>
+                          </li>
+                          <li role="presentation">
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="pass" style="padding: 4px ;" required></div>
+                          </li>
+                          <li>
+                              <div class="checkbox">
+                                  <label><input type="checkbox" value="">Recordar</label>
+                              </div>
+                          </li>
+                          <li><button type="submit" class="btn btn-block btn-success">Submit</button></li>
+                        </form>
                     </ul>
                 </div>
             </nav>
@@ -51,7 +52,7 @@
             <h1>Bienvenidos</h1>
             <p class="lead">Esta es una oportunidad única para que quienes deseen enseñar cuenten con un espacio dinámico y moderno para exponer conceptos y conocimientos. Asimismo, los alumnos contarán con las herramientas y canales de comunicación necesarios para desarrollar
                 sus potencialidades en un entorno que favorezca la adquisición de sus saberes. Bienvenido al "Aula virtual"</p>
-            <p><a class="btn btn-lg btn-success" href="registro.html" role="button">Registrese Aquí</a></p>
+            <p><a class="btn btn-lg btn-success" href="new_users.php" role="button">Registrese Aquí</a></p>
         </div>
         <div class="row marketing">
             <div class="col-lg-6">
