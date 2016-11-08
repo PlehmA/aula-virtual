@@ -9,8 +9,8 @@ $sql="call login_usuario(?,?,@valor_existe)";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
-$result=$con->query("SELECT @valor_existe");
-$row=$result->fetch_assoc();
+$result2=$con->query("SELECT @valor_existe");
+$row=$result2->fetch_assoc();
 if ($row['@valor_existe']==0)
 {
 				session_start();
