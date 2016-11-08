@@ -1,38 +1,116 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  </head>
-  <body>
-    <style>
-    form
-    {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-    }
+<html lang="es">
 
-    </style>
-    <div class="container text-center">
-      <h1 class="jumbotron text-center">Agregar productos</h1>
-      <div class="span3">
-        <form class="form-horizontal" action="save_producto.php" method="POST" accept-charset="utf-8">
-          <div class="form-group text-center">
-            <label class="control-label col-md-3" >Descripción: </label>
-            <div class="col-md-9"><input type="text" placeholder="Descripcion" required name="descripcion"></div>
-          </div>
-          <div class="form-group"><label class="control-label col-md-3" >Precio: </label>
-            <div class="col-md-9"><input type="text" placeholder="Precio" required name="precio"></div>
-          </div>
-          <div class="form-group"><label class="control-label col-md-3" >Cantidad: </label>
-            <div class="col-md-9"><input type="text" placeholder="Cantidad" required name="cantidad"></div>
-          </div>
-          <div class="form-group">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="Images\idea-genial.png">
+    <title>..--|Aula virtual|--..</title>
+    <link href="CSS/bootstrap.css" rel="stylesheet">
+    <link href="CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="CSS/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS\font-awesome.css">
+    <link rel="stylesheet" href="CSS/reg_style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <h3 class="text-muted">Aula virtual <img src="Images/book.png" class="" alt="Cinque Terre" width="100" height="80"></h3>
+            <nav class="navbar-right">
+
+                <div class="dropdown">
+                    <div class="btn-group">
+                        <a href="index.html"><button type="button" class="btn btn-info">Home</button></a>
+                        <a href="#"><button type="button" class="btn btn-info">F.A.Q.</button></a>
+                    </div>
+                    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li role="presentation">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;"></div>
+                        </li>
+                        
+                        <li role="presentation">
+                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="pass" style="padding: 4px;"></div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Recordar</label>
+                            </div>
+                        </li>
+                        <li><button type="submit" class="btn btn-block btn-success">Submit</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row main">
+                <div class="panel-heading">
+                    <div class="panel-title text-center">
+                        <h1 class="title">Registro</h1>
+                        <hr />
+                    </div>
+                </div>
+                <div class="main-login main-center">
+                    <form class="form-horizontal" method="POST" action="register.php">
+
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Your
+								Name</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa"
+										aria-hidden="true"></i></span> <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Your
+								Email</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i
+										class="fa fa-envelope fa" aria-hidden="true"></i></span> <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Username</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i
+										class="fa fa-users fa" aria-hidden="true"></i></span> <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Nombre de usuario" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Password</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i
+										class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Confirm
+								Password</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i
+										class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Confirm your Password" />
+                                </div>
+                            </div>
+                        </div>
+			<div class="form-group">
                <label class="control-label col-md-3" >Categorias:</label>
                <div class="col-md-6">
                  <select class="form-control col-md-6" name="categoria">
@@ -46,21 +124,31 @@
                   while ($row = mysqli_fetch_assoc($result)) {
                     echo '<option value="'.$row['id_tipo'].'">'.$row['tipousr'].'</option>';
                   }
-
                    ?>
                   </select>
                   </div>
+                        <div class="form-group ">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-          <div class="form-group"><label class="control-label col-md-3" hidden="Descripción"></label>
-            <div class="col-md-9 text-center"><button type="submit" name="button" class="btn btn-info"><span><i class="fa fa-upload" aria-hidden="true"></i>
-    </span>Agregar</button></div>
-          </div>
-        </form>
-      </div>
-
-
+        </div>
+        <footer class="footer">
+            <div class="container text-center">
+                <p>&copy; 2016 Todos los derechos reservados.</p>
+                <a href="login.php"><span class="glyphicon glyphicon-log-in fa-2x" aria-hidden="true"></span></a>
+                <a href="https://www.facebook.com/groups/193592334396351/"><span><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></span></a>
+                <a href="https://github.com/Polaken"><span><i class="fa fa-github fa-3x" aria-hidden="true"></i></span></a>
+                <a href="https://twitter.com/Aula_virtual_ok"><span><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></span></a>
+                <a href="https://plus.google.com/communities/104682285015405256311"><span><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></span></a>
+                <a href="contacto.html"><span><i class="fa fa-ticket fa-3x" aria-hidden="true"></i></span></a>
+            </div>
+        </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
+    <script src="JS/jquery-3.1.1.js"></script>
+    <script src="JS/bootstrap.js"></script>
+    <script src="JS/ie10-viewport-bug-workaround.js"></script>
+</body>
+
 </html>
