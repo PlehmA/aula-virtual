@@ -59,7 +59,7 @@
                 <label> <input type="checkbox" value="remember-me">Recordar</label>
                 </div>
                 </br>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" value="Ingresar">Entrar</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" value="ingresar">Entrar</button>
             </form>
         </div>
         <footer class="footer">
