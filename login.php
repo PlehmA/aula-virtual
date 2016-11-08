@@ -11,29 +11,17 @@ $stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
 $result=$con->query("SELECT @valor_existe");
 $row=$result->fetch_assoc();
-if ($row['@valor_existe']==1)
+if ($row['@valor_existe']==0)
 {
-	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
-    echo "<script>window.location.assign('inicio.php')</script>";
-}
-	else
-			{
 				session_start();
 				$_SESSION['time']=date('H:i:s');
 				$_SESSION['user']=$usuario;
 				$_SESSION['logeado']=true;
 				header("Location:welcome.php");
+}
+	else
+			{
+			echo "<script>alert ('Ingreso invalido al sistema!')</script>";
+    			echo "<script>window.location.assign('inicio.php')</script>";	
 			};
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
