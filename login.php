@@ -18,7 +18,7 @@ if ($row['@valor_existe']==0)
     	echo "<script>window.location.assign('inicio.php')</script>";	
 	
 				
-};
+}
 else
 {
 			session_start();
