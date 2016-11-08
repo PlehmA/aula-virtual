@@ -13,16 +13,19 @@ $result2=$con->query("SELECT @valor_existe");
 $row=$result2->fetch_assoc();
 if ($row['@valor_existe']==0)
 {
-				session_start();
+				
+	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
+    	echo "<script>window.location.assign('inicio.php')</script>";	
+	
+				
+}
+	else
+			{
+			session_start();
 				$_SESSION['time']=date('H:i:s');
 				$_SESSION['user']=$usuario;
 				$_SESSION['logeado']=true;
 				header("Location:welcome.php");
 				$con=close();
-}
-	else
-			{
-			echo "<script>alert ('Ingreso invalido al sistema!')</script>";
-    			echo "<script>window.location.assign('inicio.php')</script>";	
 			};
 ?>
