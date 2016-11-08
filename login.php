@@ -18,14 +18,15 @@ if ($row['@valor_existe']==0)
     	echo "<script>window.location.assign('inicio.php')</script>";	
 	
 				
-}
-	else
-			{
+};
+else
+{
 			session_start();
-				$_SESSION['time']=date('H:i:s');
-				$_SESSION['user']=$usuario;
-				$_SESSION['logeado']=true;
-				header("Location:welcome.php");
-				$con->close();
+			$_SESSION['time']=date('H:i:s');
+			$_SESSION['user']=$usuario;
+			$_SESSION['logeado']=true;
+			$con->close();
+			header("Location:welcome.php");
+				
 			};
 ?>
