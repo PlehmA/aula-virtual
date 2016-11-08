@@ -1,7 +1,7 @@
 <?php
 include_once ('includes/bdd.php');
 header('Content-Type: text/html;charset-UTF-8');
-$usuario=$_POST['user'];
+$usuario=$_POST['username'];
 $pass=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
