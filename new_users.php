@@ -112,9 +112,9 @@
                             </div>
                         </div>
 		<div class="form-group">
-               <label class="control-label col-sm-2" >Tipo de usuario</label>
-               <div class="cols-sm-2">
-                 <select class="form-control col-sm-10" name="tipousuario">
+               <label class="control-label cols-sm-1" >Tipo de usuario</label>
+               <div class="cols-sm-1">
+                 <select class="form-control cols-sm-10" name="tipousuario">
                   <?php
                   header('Content-Type: text/html;charset=utf-8');
                   include_once 'includes/bdd.php';
