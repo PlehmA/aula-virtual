@@ -111,16 +111,16 @@
                                 </div>
                             </div>
                         </div>
-			<div class="form-group">
-               <label class="control-label col-md-3" >Categorias:</label>
-               <div class="col-md-6">
-                 <select class="form-control col-md-6" name="categoria">
+		<div class="form-group">
+               <label class="control-label col-md-3" >Tipo de usuario</label>
+               <div class="cols-sm-2">
+                 <select class="form-control col-sm-10" name="tipousuario">
                   <?php
                   header('Content-Type: text/html;charset=utf-8');
                   include_once 'includes/bdd.php';
                   $con = crearConexion();
                   $con -> set_charset("utf-8");
-                  $sql = "SELECT id_tipo, tipousr FROM tipousuario order by descripcion";
+                  $sql = "SELECT id_tipo, tipousr FROM tipousuario order by tipousr";
                   $result=$con->query($sql);
                   while ($row = mysqli_fetch_assoc($result)) {
                     echo '<option value="'.$row['id_tipo'].'">'.$row['tipousr'].'</option>';
