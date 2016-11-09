@@ -112,7 +112,7 @@
                             </div>
                         </div>
 		<div class="form-group">
-               <label class="control-label col-md-3" >Tipo de usuario</label>
+               <label class="control-label col-sm-2" >Tipo de usuario</label>
                <div class="cols-sm-2">
                  <select class="form-control col-sm-10" name="tipousuario">
                   <?php
