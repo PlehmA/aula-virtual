@@ -86,7 +86,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i
-										class="fa fa-users fa" aria-hidden="true"></i></span> <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Nombre de usuario" />
+										class="fa fa-users fa" aria-hidden="true"></i></span> <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de usuario" />
                                 </div>
                             </div>
                         </div>
