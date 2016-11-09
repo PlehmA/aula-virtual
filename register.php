@@ -14,4 +14,5 @@ $stmt=$con->prepare($sql);
 $stmt->bind_param('issss', $id_usr, $nombre, $usuario, $pass, $email);
 $stmt->execute();
 $con->close();
+header('Location:bienvenido.html');
 ?>
