@@ -76,7 +76,7 @@
                         </tr>
                         <tr>
                             <td><label>Ingrese el codigo: (*)</label></td>
-                            <?php header('Location: includes/recaptcha.php') ?>
+                            <?php include_once ('includes/recaptcha.php'); ?>
                             <td><div class="g-recaptcha" data-sitekey="6LdoKQgUAAAAAL2u0Q6Se2kAmWa-mJC-TSWwNgup"></div></div></td>
                         </tr>
                         <tr>
