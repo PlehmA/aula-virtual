@@ -1,5 +1,5 @@
 <?php
-if ($_POST) {
+if ($pass==$repass) {
   session_start();
   header('Content-Type: text/html;charset=utf-8');
   include_once 'includes/bdd.php';
@@ -17,10 +17,9 @@ if ($_POST) {
   $stmt->execute();
   $con->close();
   header('Location:bienvenido.html');
-  if ($pass==$repass) {
-  }else {
+    }else {
     echo "<script>alert(Las contraseñas deben ser iguales);</script>";
   }
-}
+
 
 ?>
