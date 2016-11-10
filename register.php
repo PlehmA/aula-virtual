@@ -8,7 +8,8 @@ if ($_POST) {
   $id_usr=$_POST['id_usuario'];
   $nombre=$_POST['name'];
   $usuario=$_POST['username'];
-  $pass=$_POST['password']===$repass=$_POST['repassword'];
+  $pass=$_POST['password'];
+  $repass=$_POST['repassword'];
   $email=$_POST['email'];
   $sql='INSERT INTO usuarios(id_usuario,name,username,password,email) VALUES (?,?,?,?,?)';
   $stmt=$con->prepare($sql);
@@ -16,6 +17,10 @@ if ($_POST) {
   $stmt->execute();
   $con->close();
   header('Location:bienvenido.html');
+  if ($pass==$repass) {
+  }else {
+    echo "<script type="text/javascript">alert(Las contraseñas deben ser iguales);</script>";
+  }
 }
 
 ?>
