@@ -19,7 +19,7 @@ if ($_POST) {
   header('Location:bienvenido.html');
   if ($pass==$repass) {
   }else {
-    echo "<script type="text/javascript">alert(Las contraseñas deben ser iguales);</script>";
+    echo "<script>alert(Las contraseñas deben ser iguales);</script>";
   }
 }
 
