@@ -32,10 +32,10 @@
                     <ul class="dropdown-menu">
                         <form class="" action="user_login.php" method="POST">
                           <li role="presentation">
-                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;" required></div>
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="username" style="padding: 4px;" required></div>
                           </li>
                           <li role="presentation">
-                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="pass" style="padding: 4px ;" required></div>
+                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="password" style="padding: 4px ;" required></div>
                           </li>
                           <li>
                               <div class="checkbox">

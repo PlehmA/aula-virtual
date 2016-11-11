@@ -26,7 +26,7 @@
             <nav class="navbar-right">
                 <div class="dropdown">
                     <div class="btn-group">
-                        <a href="index.php"><button type="button" class="btn btn-info">Home</button></a>
+                        <a href="index.html"><button type="button" class="btn btn-info">Home</button></a>
                         <a href="#"><button type="button" class="btn btn-info">F.A.Q.</button></a>
                     </div>
                     <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
@@ -90,12 +90,12 @@
         <footer class="footer">
             <div class="container text-center">
                 <p>&copy; 2016 Todos los derechos reservados.</p>
-                <a href="inicio.php"><span class="glyphicon glyphicon-log-in fa-2x" aria-hidden="true"></span></a>
+                <a href="login.php"><span class="glyphicon glyphicon-log-in fa-2x" aria-hidden="true"></span></a>
                 <a href="https://www.facebook.com/groups/193592334396351/"><span><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></span></a>
                 <a href="https://github.com/Polaken"><span><i class="fa fa-github fa-3x" aria-hidden="true"></i></span></a>
                 <a href="https://twitter.com/Aula_virtual_ok"><span><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></span></a>
                 <a href="https://plus.google.com/communities/104682285015405256311"><span><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></span></a>
-                <a href="contacto.php"><span><i class="fa fa-ticket fa-3x" aria-hidden="true"></i></span></a>
+                <a href="contacto.html"><span><i class="fa fa-ticket fa-3x" aria-hidden="true"></i></span></a>
             </div>
         </footer>
     </div>

@@ -5,7 +5,7 @@ $usuario=$_POST['username'];
 $pass=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
-$sql="call login_usuario(?,?,@valor_existe)";
+$sql="call login_usuario2(?,?,@valor_existe)";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
@@ -15,18 +15,17 @@ if ($row['@valor_existe']==0)
 {
 
 	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
-    	echo "<script>window.location.assign('inicio.php')</script>";
+    	echo "<script>window.location.assign('index.php')</script>";
 
-				
+
 }
 else
 {
 			session_start();
-			$_SESSION['time']=date('H:i:s');
-			$_SESSION['user']=$usuario;
+			$_SESSION['username']=$usuario;
 			$_SESSION['logeado']=true;
 			$con->close();
-			header("Location:welcome.php");
-
+      header('Location:userapp.php');
 			};
-?>
+
+ ?>
