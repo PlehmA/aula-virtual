@@ -27,6 +27,6 @@ else
 			$_SESSION['logeado']=true;
 			$con->close();
 			header("Location:welcome.php");
-			var_dump(error_log(message))
+			var_dump(error_log(message));
 			};
 ?>
