@@ -1,5 +1,5 @@
 <?php
-var_dump(error_log(message))
+var_dump(error_log(message));
 include_once ('includes/bdd.php');
 header('Content-Type: text/html;charset-UTF-8');
 $usuario=$_POST['username'];
