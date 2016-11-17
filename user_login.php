@@ -9,7 +9,7 @@ $con->set_charset("UTF-8");
 $md5_pass = md5($password);
 $sql="SELECT username,password FROM usrs_cmns WHERE username = '$usuario' AND password = '$md5_pass'";
 $stmt = $con->prepare($sql);
-$stmt->bind_param('isss', $usuario, $password);
+$stmt->bind_param('ss', $usuario, $password);
 $stmt->execute();
 $result2=$con->query($sql);
 $row=$result2->fetch_assoc();
