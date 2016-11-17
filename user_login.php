@@ -7,7 +7,7 @@ $password=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
 $md5_pass = md5($password);
-$sql="SELECT id_usuario,username,password,email FROM usrs_cmns WHERE username = '$usuario' AND password = '$md5_pass'";
+$sql="SELECT username,password FROM usrs_cmns WHERE username = '$usuario' AND password = '$md5_pass'";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('isss', $usuario, $password);
 $stmt->execute();
