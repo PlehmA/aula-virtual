@@ -10,7 +10,7 @@ $sql="call login_usuario2(?,?,@valor_existe)";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
-$result2=$con->query("SELECT @valor_existe");
+$result2=$con->query($sql);
 $row=$result2->fetch_assoc();
 if ($row['@valor_existe']==0)
 {
