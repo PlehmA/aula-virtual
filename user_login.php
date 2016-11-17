@@ -6,6 +6,7 @@ $usuario=$_POST['username'];
 $pass=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
+
 $sql="SELECT id_usuario,username,password,email FROM usrs_cmns WHERE username = '$usuario' AND password = '$md5_pass'";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('ss', $usuario, $pass);
