@@ -6,13 +6,13 @@ $usuario=$_POST['username'];
 $pass=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
-$sql="call login_usuario2(?,?,@valor_existe)";
+$sql="SELECT id_usuario,username,password,email FROM usrs_cmns WHERE username = '$usuario' AND password = '$md5_pass'";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
 $result2=$con->query($sql);
 $row=$result2->fetch_assoc();
-if ($row['@valor_existe']==0)
+if ($row[$sql]==0)
 {
 
 	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
