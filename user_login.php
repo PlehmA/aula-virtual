@@ -8,10 +8,15 @@ $con=crearConexion();
 $con->set_charset("UTF-8");
 $md5_pass = md5($password);
 $sql="SELECT username,password FROM usrs_cmns";
+var_dump(error_log(message));
 $stmt = $con->prepare($sql);
-$stmt->bind_param('ss', $usuario, $password);
+var_dump(error_log(message));
+$stmt->bind_param('ss', $usuario, $md5_pass);
+var_dump(error_log(message));
 $stmt->execute();
+var_dump(error_log(message));
 $result2=$con->query($sql);
+var_dump(error_log(message));
 $row=$result2->fetch_assoc();
 if ($row[$sql]==0)
 {
