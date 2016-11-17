@@ -7,7 +7,7 @@ $password=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
 $md5_pass = md5($password);
-$sql="SELECT username,password FROM usrs_cmns" values(?,?);
+$sql="SELECT username,password FROM usrs_cmns";
 $stmt = $con->prepare($sql);
 $stmt->bind_param('ss', $usuario, $password);
 $stmt->execute();
