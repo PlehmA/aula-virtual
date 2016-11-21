@@ -25,6 +25,10 @@
             <nav class="navbar-right">
                 <div class="dropdown">
                     <div class="btn-group">
+                      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                      </fb:login-button>
+                      <div id="status">
+                      </div>
                         <a href="#"><button type="button" class="btn btn-info">Home</button></a>
                         <a href="#"><button type="button" class="btn btn-info">F.A.Q.</button></a>
                     </div>
@@ -87,6 +91,7 @@
     <script src="JS/jquery-3.1.1.js"></script>
     <script src="JS/bootstrap.js"></script>
     <script src="JS/ie10-viewport-bug-workaround.js"></script>
+    <script src="JS\fblogin.js" charset="utf-8"></script>
 </body>
 
 </html>
