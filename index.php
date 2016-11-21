@@ -91,7 +91,7 @@
     <script src="JS/jquery-3.1.1.js"></script>
     <script src="JS/bootstrap.js"></script>
     <script src="JS/ie10-viewport-bug-workaround.js"></script>
-    <script src="JS\fblogin.js" charset="utf-8"></script>
+    <script src="JS\fblogin.js"></script>
 </body>
 
 </html>
