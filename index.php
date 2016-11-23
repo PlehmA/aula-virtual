@@ -25,16 +25,12 @@
             <nav class="navbar-right">
                 <div class="dropdown">
                     <div class="btn-group">
-                      <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-                      </fb:login-button>
-                      <div id="status">
-                      </div>
                         <a href="#"><button type="button" class="btn btn-info">Home</button></a>
                         <a href="#"><button type="button" class="btn btn-info">F.A.Q.</button></a>
                     </div>
                     <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <form class="" action="user_login.php" method="POST">
+                        <form class="" action="classes\login\class_login.php" method="POST">
                           <li role="presentation">
                               <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="username" style="padding: 4px;" required></div>
                           </li>
