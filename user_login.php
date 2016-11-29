@@ -1,37 +1,27 @@
 <?php
-var_dump(error_log(message));
-include_once ('');
+include_once ('includes/bdd.php');
 header('Content-Type: text/html;charset-UTF-8');
 $usuario=$_POST['username'];
-$password=$_POST['password'];
+$pass=$_POST['password'];
 $con=crearConexion();
 $con->set_charset("UTF-8");
-$md5_pass = md5($password);
-$sql="SELECT username,password FROM usrs_cmns";
-var_dump(error_log(message));
+$sql="call login_usuario2(?,?,@valor_existe)";
 $stmt = $con->prepare($sql);
-var_dump(error_log(message));
-$stmt->bind_param('ss', $usuario, $md5_pass);
-var_dump(error_log(message));
+$stmt->bind_param('ss', $usuario, $pass);
 $stmt->execute();
-var_dump(error_log(message));
-$result2=$con->query($sql);
-var_dump(error_log(message));
+$result2=$con->query("SELECT @valor_existe");
 $row=$result2->fetch_assoc();
-if ($row[$sql]==0)
+if ($row['@valor_existe']==0)
 {
-
-echo "<script>alert ('Ingreso invalido al sistema!')</script>";
-echo "<script>window.location.assign('index.php')</script>";
-
-
+	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
+    echo "<script>window.location.assign('frm_login.html')</script>";
 }
-else
-{
-session_start();
-$_SESSION['username']=$usuario;
-$_SESSION['logeado']=true;
-header('Location:userapp.php');
+	else 
+			{
+				session_start();
+				$_SESSION['time']=date('H:i:s');
+				$_SESSION['username']=$usuario;
+				$_SESSION['logeado']=true;
+				header("location:user_app.php");
 			};
-
  ?>

@@ -58,25 +58,13 @@
                 </div>
                 <div class="main-login main-center">
                     <form class="form-horizontal" method="POST" action="register.php">
-
-                        <div class="form-group">
-                            <label for="name" class="cols-sm-2 control-label">Your
-								Name</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user fa"
-										aria-hidden="true"></i></span> <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="form-group">
                             <label for="email" class="cols-sm-2 control-label">Your
-								Email</label>
+                Email</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i
-										class="fa fa-envelope fa" aria-hidden="true"></i></span> <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" />
+                    class="fa fa-envelope fa" aria-hidden="true"></i></span> <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" />
                                 </div>
                             </div>
                         </div>
@@ -86,7 +74,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i
-										class="fa fa-users fa" aria-hidden="true"></i></span> <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de usuario" />
+                    class="fa fa-users fa" aria-hidden="true"></i></span> <input type="username" class="form-control" name="username" id="username" placeholder="Nombre de usuario" />
                                 </div>
                             </div>
                         </div>
@@ -96,36 +84,36 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i
-										class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+                    class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="confirm" class="cols-sm-2 control-label">Confirm
-								Password</label>
+                Password</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i
-										class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Confirm your Password" />
+                    class="fa fa-lock fa-lg" aria-hidden="true"></i></span> <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Confirm your Password" />
                                 </div>
                             </div>
                         </div>
-		<div class="form-group">
+    <div class="form-group">
                <label class="control-label cols-sm-1" >Tipo de usuario</label>
                <div class="cols-sm-1">
                  <select class="form-control cols-sm-10" name="tipousuario">
                   <?php
-                  header('Content-Type: text/html;charset=utf-8');
-                  include_once 'includes/bdd.php';
-                  $con = crearConexion();
-                  $con -> set_charset("utf-8");
-                  $sql = "SELECT id_tipo, tipousr FROM tipousuario order by tipousr";
-                  $result=$con->query($sql);
-                  while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<option value="'.$row['id_tipo'].'">'.$row['tipousr'].'</option>';
-                  }
-                   ?>
+header('Content-Type: text/html;charset=utf-8');
+include_once 'includes/bdd.php';
+$con = crearConexion();
+$con->set_charset("utf-8");
+$sql    = "SELECT id_tipo, tipo_usuario FROM tipo_users order by tipo_usuario";
+$result = $con->query($sql);
+while ($row = mysqli_fetch_assoc($result)) {
+    echo '<option value="' . $row['id_tipo'] . '">' . $row['tipo_usuario'] . '</option>';
+}
+?>
                   </select>
                   </div>
                         <div class="form-group ">
@@ -138,7 +126,7 @@
         <footer class="footer">
             <div class="container text-center">
                 <p>&copy; 2016 Todos los derechos reservados.</p>
-                <a href="login.php"><span class="glyphicon glyphicon-log-in fa-2x" aria-hidden="true"></span></a>
+                <a href="inicio.php"><span class="glyphicon glyphicon-log-in fa-2x" aria-hidden="true"></span></a>
                 <a href="https://www.facebook.com/groups/193592334396351/"><span><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></span></a>
                 <a href="https://github.com/Polaken"><span><i class="fa fa-github fa-3x" aria-hidden="true"></i></span></a>
                 <a href="https://twitter.com/Aula_virtual_ok"><span><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></span></a>

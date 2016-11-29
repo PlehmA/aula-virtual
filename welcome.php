@@ -4,7 +4,7 @@ if ($_SESSION['logeado'])
 {
 	echo "<h1 style=text-align:center;>¡Bienvenidos!</h1>";
 	echo "</br>";
-	echo "¿Como andas " .$_SESSION['user']."?";
+	echo "¿Como andas " .$_SESSION['username']."?";
 	echo "</br>";
 	echo "Horario de conexion: ". $_SESSION['time'];
 }
@@ -13,12 +13,22 @@ if ($_SESSION['logeado'])
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="Images\idea-genial.png">
+    <title>..--|Aula virtual|--..</title>
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="CSS/jumbotron-narrow.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style,css">
+    <link rel="stylesheet" href="CSS\font-awesome.css">
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 	</head>
 	<body>
 		<hr>
-		<a href='inicio.php' <?php session_destroy(); ?>><button type="submit" name="button" class="btn btn-danger">Logout</button></a>
+		<a href='index.php' <?php session_destroy(); ?>><button type="submit" name="button" class="btn btn-danger">Logout</button></a>
 		<br>
 		<hr>
 		<a href='list_productos.php'>Lista productos</a>

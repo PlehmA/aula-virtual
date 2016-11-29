@@ -28,7 +28,7 @@
                     </div>
                     <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
                     <ul class="dropdown-menu">
-                        <form class="" action="user_login.php" method="POST">
+                        <form class="" action="login.php" method="POST">
                           <li role="presentation">
                               <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="user" style="padding: 4px;" required></div>
                           </li>

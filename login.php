@@ -1,6 +1,5 @@
 <?php
-var_dump(error_log(message));
-include_once ('includes/bdd.php');
+include_once 'includes/bdd.php';
 header('Content-Type: text/html;charset-UTF-8');
 $usuario=$_POST['username'];
 $pass=$_POST['password'];
@@ -14,20 +13,15 @@ $result2=$con->query("SELECT @valor_existe");
 $row=$result2->fetch_assoc();
 if ($row['@valor_existe']==0)
 {
-
 	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
-    	echo "<script>window.location.assign('inicio.php')</script>";
-
-				
+    echo "<script>window.location.assign('index.php')</script>";
 }
-else
-{
-			session_start();
-			$_SESSION['time']=date('H:i:s');
-			$_SESSION['user']=$usuario;
-			$_SESSION['logeado']=true;
-			$con->close();
-			header("Location:welcome.php");
-			
+	else 
+			{
+				session_start();
+				$_SESSION['time']=date('H:i:s');
+				$_SESSION['username']=$usuario;
+				$_SESSION['logeado']=true;
+				header("location:welcome.php");
 			};
 ?>

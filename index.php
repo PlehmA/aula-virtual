@@ -20,34 +20,7 @@
 
 <body>
     <div class="container">
-        <div class="header clearfix">
-            <h3 class="text-muted">Aula virtual <img src="Images/book.png" class="" alt="Cinque Terre" width="100" height="80"></h3>
-            <nav class="navbar-right">
-                <div class="dropdown">
-                    <div class="btn-group">
-                        <a href="#"><button type="button" class="btn btn-info">Home</button></a>
-                        <a href="#"><button type="button" class="btn btn-info">F.A.Q.</button></a>
-                    </div>
-                    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Login <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <form class="" action="classes\login\class_login.php" method="POST">
-                          <li role="presentation">
-                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span><input class="form-control" type="text" placeholder="Email address" name="username" style="padding: 4px;" required></div>
-                          </li>
-                          <li role="presentation">
-                              <div class="input-group"><span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span><input class="form-control" type="password" placeholder="Password" name="password" style="padding: 4px ;" required></div>
-                          </li>
-                          <li>
-                              <div class="checkbox">
-                                  <label><input type="checkbox" value="">Recordar</label>
-                              </div>
-                          </li>
-                          <li><button type="submit" class="btn btn-block btn-success">Submit</button></li>
-                        </form>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+       <?php require_once('header.php'); ?>
         <div class="jumbotron">
             <h1>Bienvenidos</h1>
             <p class="lead">Esta es una oportunidad única para que quienes deseen enseñar cuenten con un espacio dinámico y moderno para exponer conceptos y conocimientos. Asimismo, los alumnos contarán con las herramientas y canales de comunicación necesarios para desarrollar
@@ -72,17 +45,9 @@
                 <p>No siempre seguir las reglas es sencillo pero si divertido. Presta atención y se compañero que la diversión viene sola.</p>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container text-center">
-                <p>&copy; 2016 Todos los derechos reservados.</p>
-                <a href="inicio.php"><span class="glyphicon glyphicon-log-in fa-2x" aria-hidden="true"></span></a>
-                <a href="https://www.facebook.com/groups/193592334396351/"><span><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></span></a>
-                <a href="https://github.com/Polaken"><span><i class="fa fa-github fa-3x" aria-hidden="true"></i></span></a>
-                <a href="https://twitter.com/Aula_virtual_ok"><span><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></span></a>
-                <a href="https://plus.google.com/communities/104682285015405256311"><span><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></span></a>
-                <a href="contacto.php"><span><i class="fa fa-ticket fa-3x" aria-hidden="true"></i></span></a>
-            </div>
-        </footer>
+        <?php require_once('footer.php') ?>
+                
+                
     </div>
     <script src="JS/jquery-3.1.1.js"></script>
     <script src="JS/bootstrap.js"></script>
