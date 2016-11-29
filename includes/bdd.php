@@ -1,12 +1,9 @@
 <?php
-class Conectar
-{
-	public static function con()
-	{
-		$con = mysql_connect("localhost","root","p12345678");
-		mysql_query("SET NAMES 'utf8'");
-		mysql_select_db("login");
-		return $con;
-	}
+function crearConexion() {
+	$config = parse_ini_file("database.ini");
+	$con = new mysqli ($config['SERVER'],$config['USER'],$config['PASSWORD'],$config['NAMEBDD']);
+	if ($con->connect_errno > 0)
+	die ( "Error en la conexión" );
+	return $con;
 }
 ?>
