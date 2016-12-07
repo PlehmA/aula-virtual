@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($nombre,$password);
 include_once ('includes/bdd.php');
 class Login
 {
