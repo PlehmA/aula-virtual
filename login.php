@@ -1,5 +1,5 @@
 <?php
-include_once 'includes/bdd.php';
+include_once ('includes/bdd.php');
 header('Content-Type: text/html;charset-UTF-8');
 $usuario=$_POST['username'];
 $pass=$_POST['password'];
@@ -16,7 +16,7 @@ if ($row['@valor_existe']==0)
 	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
     echo "<script>window.location.assign('index.php')</script>";
 }
-	else 
+	else
 			{
 				session_start();
 				$_SESSION['time']=date('H:i:s');

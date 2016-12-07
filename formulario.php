@@ -1,4 +1,3 @@
-<?php require_once('conection.php'); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,7 +33,17 @@
   <input type="hidden" name="identificador" value="<?php echo $identificador;?>">
   <input type="hidden" name="respuestas" value="<?php echo $respuestas;?>">
     <tr>
-    <td><label for="" style="font-family: 'Lobster', cursive; font-size: 40px;" class="center-block"><?php if ($_SESSION['logeado']){echo "Hi ".$_SESSION['username']."! ";} ?></label></td>
+    <td><label for="" style="font-family: 'Lobster', cursive; font-size: 40px;" class="center-block"><?php
+    session_start();
+     if ($_SESSION['logeado']){
+       header('Content-Type: text/html;charset=utf-8');
+       include_once 'includes/bdd.php';
+       $con = crearConexion();
+       $con -> set_charset("utf-8");
+      echo "Hi ".$_SESSION['username']."! ";}
+      else {
+        header ('location:https://i.ytimg.com/vi/_F9OtJ3Fp2w/sddefault.jpg');
+      } ?></label></td>
     <td></td>
     </tr>
     <tr>
@@ -57,10 +66,3 @@
     <script src="JS\fblogin.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-

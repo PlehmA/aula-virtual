@@ -28,7 +28,7 @@ if ($_SESSION['logeado'])
 	</head>
 	<body class="text-center">
 		<hr>
-		<a href='inicio.php' <?php session_destroy(); ?>><button type="submit" name="button" class="btn btn-danger">Logout</button></a>
+		<a href='inicio.php'><button type="submit" name="button" class="btn btn-danger">Logout</button></a>
 		<br>
 		<hr>
 		<a href='list_usuarios.php'>Lista de usuarios</a>

@@ -24,6 +24,8 @@
         <div class="table-responsive">
           <table class="table">
             <?php
+            session_start();
+            if ($_SESSION['logeado']) {
             header('Content-Type: text/html;charset=utf-8');
             include_once 'includes/bdd.php';
             $con = crearConexion();
@@ -74,7 +76,7 @@
             <?php
             echo "</td>";
             echo "</tr>";
-          }
+          }}
               ?>
             </tbody>
           </table>

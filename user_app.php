@@ -1,4 +1,12 @@
-
+<?php
+session_start();
+if ($_SESSION['logeado']){
+	header('Content-Type: text/html;charset=utf-8');
+  include_once ('includes/bdd.php');
+  $con = crearConexion();
+  $con -> set_charset("utf-8");
+}
+	?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -22,11 +30,12 @@
 <div class="page-header pull-right">
 	<nav>
 		<a href="subirimagenes.php"><button class="btn btn-primary active"> Subir Imagenes </button></a>
+		<a href="index.php" ><button type="logout" name="logout" class="btn btn-primary active" onclick="<?php session_destroy(); ?>"> Logout </button></a>
 	</nav>
 </div>
 <div class="container"></div>
 <table class="table">
-<?php 
+<?php
 	header('Content-Type: text/html;charset=utf-8');
     include_once 'includes/bdd.php';
     $con = crearConexion();
@@ -72,6 +81,7 @@
 </tbody>
 
 </table>
+
 <a href="formulario.php"><button class="btn btn-primary active center-block"> Nuevo tema </button></a>
 </div>
 <script src="JS/jquery-3.1.1.js"></script>
